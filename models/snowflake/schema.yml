@@ -23,3 +23,31 @@ sources:
                 - not_null
       - name: orders
         description: 'orders table'
+
+
+models:
+    # customer_order_summary_model
+    - name: customer_order_summary_model
+      description: "Summary from aws_staging_data"
+      columns:
+          - name: cust_name
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+
+          - name: total_order_count
+            description: "total_order_count"
+            tests:
+                - not_null
+
+          - name: total_order_amount
+            description: "total_order_amount"
+            tests:
+                - not_null
+
+          - name: total_advance_amount
+            description: "total_advance_amount"
+            tests:
+                - not_null
+      
