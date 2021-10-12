@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: aws_staging_data
+    description: 'sample db provided by w3 school'
+    database: AWS_DB
+    schema: staging
+    tables:
+      - name: agents
+        description: 'agents table'
+        columns:
+           - name: agent_code
+             description: 'agent code must unique and not be null'
+             tests:
+                - not_null
+      - name: customer
+        description: 'customer table'
+        columns:
+          - name: cust_code
+            description: 'Customer code must be unique and not null'
+            tests:
+                - unique
+                - not_null
+      - name: orders
+        description: 'orders table'
