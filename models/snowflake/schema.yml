@@ -21,6 +21,9 @@ sources:
             tests:
                 - unique
                 - not_null
+                - relationships:
+                    to: source('aws_staging_data', 'agents')
+                    field: agent_code
       - name: orders
         description: 'orders table'
 
@@ -30,6 +33,12 @@ models:
     - name: customer_order_summary_model
       description: "Summary from aws_staging_data"
       columns:
+          - name: agent_name
+            description: "agent name"
+            tests:
+                - unique
+                - not_null
+
           - name: cust_name
             description: "The primary key for this table"
             tests:

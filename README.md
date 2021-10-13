@@ -17,7 +17,10 @@ Notes:
 
 	- select from source tables in your models using the {{ source() }} function, helping define the lineage of your data
 	
-	From <https://docs.getdbt.com/docs/building-a-dbt-project/using-sources> 
+	From <https://docs.getdbt.com/docs/building-a-dbt-project/using-sources>
+	
+	- dbt-guide
+	https://about.gitlab.com/handbook/business-technology/data-team/platform/dbt-guide/
 
 
 
