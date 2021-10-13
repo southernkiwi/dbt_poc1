@@ -38,3 +38,7 @@ models:
             +materialized: table
             +database: ANALYST_DB
             +schema: MODEL
+      aggregates:
+            +materialized: table
+            +database: ANALYST_DB
+            +schema: MODEL
