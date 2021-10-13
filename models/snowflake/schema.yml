@@ -21,6 +21,9 @@ sources:
             tests:
                 - unique
                 - not_null
+          - name: agent_code
+            tests:
+                - not_null
                 - relationships:
                     to: source('aws_staging_data', 'agents')
                     field: agent_code
