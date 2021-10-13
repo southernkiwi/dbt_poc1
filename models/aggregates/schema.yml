@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: analyst_model_agg
+    description: 'analyst_db model'
+    database: ANALYST_DB
+    schema: MODEL
+    tables:
+      - name: agg_order_summary
+        description: "Summary from aws_staging_data"
+        columns:
+          - name: agent_name
+            description: "agent name"
+            tests:
+              - unique
+              - not_null
+
+          - name: cust_name
+            description: "The primary key for this table"
+            tests:
+               - unique
+               - not_null
+
+          - name: total_order
+            description: "total_order"
+            tests:
+               - not_null
+

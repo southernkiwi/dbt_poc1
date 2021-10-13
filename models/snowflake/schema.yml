@@ -29,34 +29,39 @@ sources:
 
 
 models:
+  - name: analyst_model_data
+    description: 'analyst_db model'
+    database: ANALYST_DB
+    schema: MODEL
+    tables:
     # customer_order_summary_model
-    - name: customer_order_summary_model
-      description: "Summary from aws_staging_data"
-      columns:
+      - name: customer_order_summary_model
+        description: "Summary from aws_staging_data"
+        columns:
           - name: agent_name
             description: "agent name"
             tests:
-                - unique
-                - not_null
+              - not_null
 
           - name: cust_name
             description: "The primary key for this table"
             tests:
-                - unique
-                - not_null
+               - unique
+               - not_null
 
           - name: total_order_count
             description: "total_order_count"
             tests:
-                - not_null
+               - not_null
 
           - name: total_order_amount
             description: "total_order_amount"
             tests:
-                - not_null
+               - not_null
 
           - name: total_advance_amount
             description: "total_advance_amount"
             tests:
-                - not_null
-      
+              - not_null
+
+#      - name: agg_order_summary
