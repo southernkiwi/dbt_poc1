@@ -14,7 +14,11 @@ with customer_order_summary as (
 ),
 
 final as (
-    select *
+    select agent_name, 
+        cust_name, 
+        total_order_count, 
+        {{ cents_to_dollars('total_order_amount') }}  as total_order_amount, 
+        total_advance_amount 
     from customer_order_summary
 )
 

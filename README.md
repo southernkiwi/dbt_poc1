@@ -14,6 +14,7 @@ Steps :
 Notes:
 	-	how to start a dbt project either cloud or cli
 		https://docs.getdbt.com/tutorial/setting-up
+		https://towardsdatascience.com/a-hands-on-tutorial-for-dbt-f749f7749c8d
 
 	- select from source tables in your models using the {{ source() }} function, helping define the lineage of your data
 	
